@@ -1,0 +1,19 @@
+Reading config file F:\Depixelizing Pixel Art in Real Time\Demo\snes9x.conf.
+Saving	config file	F:\Depixelizing Pixel Art in Real Time\Demo\snes9x.conf
+Sound buffer size: 8200 (2050 samples)
+No ROM file header found.
+Unable to find msu file F:\Depixelizing Pixel Art in Real Time\Demo\Patches\Legend of Zelda, The - A Link to the Past (USA).msu1.
+Unable to find msu file F:\Depixelizing Pixel Art in Real Time\Demo\Patches\Legend of Zelda, The - A Link to the Past (USA).msu1.
+Map_LoROMMap
+"THE LEGEND OF ZELDA" [checksum ok] LoROM, 8Mbits, ROM+RAM+BAT, NTSC, SRAM:64Kbits, ID:$__0, CRC32:777AAC2F
+Unable to find msu file F:\Depixelizing Pixel Art in Real Time\Demo\Patches\Legend of Zelda, The - A Link to the Past (USA).msu1.
+Sound buffer size: 8200 (2050 samples)
+Saving	config file	F:\Depixelizing Pixel Art in Real Time\Demo\snes9x.conf
+Unable to find msu file F:\Depixelizing Pixel Art in Real Time\Demo\Patches\Legend of Zelda, The - A Link to the Past (USA).msu1.
+Unable to find msu file F:\Depixelizing Pixel Art in Real Time\Demo\Patches\Legend of Zelda, The - A Link to the Past (USA).msu1.
+Map_LoROMMap
+Unable to find msu file F:\Depixelizing Pixel Art in Real Time\Demo\Patches\Legend of Zelda, The - A Link to the Past (USA).msu1.
+Sound buffer size: 8200 (2050 samples)
+Saving	config file	F:\Depixelizing Pixel Art in Real Time\Demo\snes9x.conf
+Saving	config file	F:\Depixelizing Pixel Art in Real Time\Demo\snes9x.conf
+Saving	config file	F:\Depixelizing Pixel Art in Real Time\Demo\snes9x.conf
