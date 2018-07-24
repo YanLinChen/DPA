@@ -9,3 +9,7 @@ https://nk013692.wixsite.com/depixelart
   CUDA SDK
   
   OpenCV
+  
+   zlib
+   
+   libpng
