@@ -7,3 +7,6 @@
 3.下載我們的Source Code並且建置對應平台及位元數(我們使用VS2013 WIN32)
 4.在模擬器專案加入以上3個Library(步驟2,3)
 5.取代模擬器原生Render.cpp為我們提供的即可。
+
+或者下載https://github.com/YanLinChen/snes9x
+再作步驟2~4。
