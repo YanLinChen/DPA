@@ -2,6 +2,12 @@
 #include "cutil_math.cuh"
 __device__ __host__ int CeilDiv(int a, int b) { return (a - 1) / b + 1; }
 
+/*This Following Code Block DPAOnGPU is modify from  shaders in project
+Depixelizing Pixel Art on GPUs
+by Felix Kreuzer
+https://www.cg.tuwien.ac.at/research/publications/2014/KREUZER-2014-DPA/
+*/
+#pragma region DPAOnGPU
 #pragma region DEFINE
 #define EDGE_HORVERT 16
 #define EDGE_DIAGONAL_ULLR 32
@@ -2738,6 +2744,9 @@ __global__ void GaussRasterizer(CellGraphBudffer_t cellbuffer, texture_t similar
 	output.SetPixel(output.GetPos(x, y), colorSum.x / weightSum, colorSum.y / weightSum, colorSum.z / weightSum);
 }
 #pragma endregion RASTERIZER
+
+#pragma endregion DPAOnGPU
+
 GraphBuilder::GraphBuilder()
 {
 #ifdef LOG
@@ -2824,13 +2833,14 @@ Image* GraphBuilder::Bulid_DisSimilarGraph(Image *source)
 		printf("%s\n", cudaGetErrorString(error));
 		system("pause");
 	}
+	delete disSimTex;
 	return update_disSimTex;
 
 }
-CellGraphBudffer_t* GraphBuilder::BulidCellGraph(Image *source, Image *simGraph)
+void GraphBuilder::BulidCellGraph(CellGraphBudffer_t *cgBuffer,Image *source, Image *simGraph)
 {
 	cudaError_t error;
-	CellGraphBudffer_t *cgBuffer = GenCGBuffer(source->GetSize().width, source->GetSize().height);
+	//CellGraphBudffer_t *cgBuffer = GenCGBuffer(source->GetSize().width, source->GetSize().height);
 	int width_tar = source->GetSize(1, -1).width, heigh_tar = source->GetSize(1, -1).height;
 #ifdef LOG
 	cudaEvent_t start, stop;
@@ -2851,7 +2861,6 @@ CellGraphBudffer_t* GraphBuilder::BulidCellGraph(Image *source, Image *simGraph)
 		printf("%s\n", cudaGetErrorString(error));
 		system("pause");
 	}
-	return cgBuffer;
 }
 void GraphBuilder::OptimizeCurve(CellGraphBudffer_t* cgBuffer, cv::Size sourceSize){
 	cudaError_t error;
